@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import mystyl from './Mystyle';
+import frame from  './images/Frame 130.png'
+import { BiBellPlus } from "react-icons/bi";
 
 function App() {
+   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1 style={{backgroundColor:"black", color:"red"}}>Welcome</h1>
+        <div style={mystyl}></div>
+        <div style={mystyl.header}></div>
+        <p className='p'>New react class</p>
+        <img src={require("./images/Frame 130.png")} alt="" />
+        <img src={frame} alt="" />
+        <button className='btn btn-dark'>click</button>
+        <i className='fa fa-user'></i>
+        <i className='fa fa-home'></i>
+        <BiBellPlus />
     </div>
   );
 }
