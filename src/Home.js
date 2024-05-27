@@ -10,6 +10,7 @@ const Home = () => {
  const [oneuser, setoneuser] = useState({})
  const [index, setindex] = useState("")
  const [count, setcount] = useState(1)
+ 
  const [count2, setcount2] = useState(1)
 
 
