@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import Img from './Img'
+import Navbar from './Navbar'
+import Sidenav from './Sidenav'
+import { Outlet } from 'react-router-dom'
 
 const Fetch = () => {
     const [data, setdata] = useState([])
@@ -23,7 +26,12 @@ const Fetch = () => {
   
   return (
     <>
-       <div className='flex justify-content-center align-items-center w-100'>
+    <Navbar/>
+    <div className='d-flex justify-content-between  w-100'>
+    <Sidenav/>
+    <div className='w-70'>
+        <Outlet/>
+    {/* <div className='d-flex justify-content-center flex-wrap align-items-center w-100'>
            {data.map((el , i)=>(
             <div className='w-25 shadow card px-2 py-3'>
                 <Img sty="w-50 h-25" image={el.songImage} />
@@ -34,7 +42,12 @@ const Fetch = () => {
            ))
 
            }
-       </div>
+       </div> */}
+    </div>
+   
+    </div>
+   
+       
     </>
   )
 }

@@ -8,14 +8,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';
 import Fetch from './Fetch';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Notfound from './Notfound';
+import Navbar from './Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     {/* <Home/> */}
-    <App />
-    {/* <Fetch/> */}
-   
+    <BrowserRouter>
+    <Routes>
+      <Route path='/*' element={<Notfound/>}/>
+      
+      <Route path='/fetch' element={<Fetch/>} >
+       <Route path='/fetch/app' element={<App />}/>
+       <Route path='/fetch/home' element={ <Home/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

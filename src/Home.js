@@ -1,4 +1,5 @@
 import React ,{useState, useEffect} from 'react'
+import Navbar from './Navbar'
 
 const Home = () => {
   // let name = "Teni"
@@ -61,6 +62,7 @@ const Home = () => {
 
   return (
     <>
+   {/* <Navbar/>  */}
     <h1>{count}</h1>
     <h1>{count2}</h1>
     
