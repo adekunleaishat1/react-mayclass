@@ -11,6 +11,8 @@ import Fetch from './Fetch';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Notfound from './Notfound';
 import Navbar from './Navbar';
+import Http from './Http';
+import Onemusic from './Onemusic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +20,8 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path='/*' element={<Notfound/>}/>
+      <Route path='/' element={<Http/>}/>
+      <Route path='/music/:id' element={<Onemusic/>}/>
       
       <Route path='/fetch' element={<Fetch/>} >
        <Route path='/fetch/app' element={<App />}/>
