@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "221b",
+      "username": "adebolade",
+      "email": "bolade@gmail.com",
+      "password": "Tholani@123"
+    },
+    {
+      "id": "5697",
+      "username": "tholani",
+      "email": "tolani@gmail.com",
+      "password": "Tholani@123"
+    },
+    {
+      "id": "fd44",
+      "username": "adetola",
+      "email": "adetola@gmail.com",
+      "password": "Adetola@123"
+    },
+    {
+      "id": "a556",
+      "username": "adetola",
+      "email": "adetola@gmail.com",
+      "password": "Adetola@123"
+    },
+    {
+      "id": "3773",
+      "username": "esther",
+      "email": "ariyo453@gmail.com",
+      "password": "Ariyo34@"
+    }
+  ],
+  "post": []
+}

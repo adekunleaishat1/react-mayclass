@@ -13,6 +13,8 @@ import Notfound from './Notfound';
 import Navbar from './Navbar';
 import Http from './Http';
 import Onemusic from './Onemusic';
+import Form from './Form';
+import Login from './Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +24,8 @@ root.render(
       <Route path='/*' element={<Notfound/>}/>
       <Route path='/' element={<Http/>}/>
       <Route path='/music/:id' element={<Onemusic/>}/>
+      <Route path='/formik' element={<Form/>}/>
+      <Route path='/login' element={<Login/>}/>
       
       <Route path='/fetch' element={<Fetch/>} >
        <Route path='/fetch/app' element={<App />}/>

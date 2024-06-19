@@ -3,9 +3,10 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const Onemusic = () => {
-    const {id }= useParams()
+    const {id}= useParams()
     const [onedata, setonedata] = useState({})
     const [isplaying, setisplaying] = useState(false)
+    const [currenttime, setcurrenttime] = useState(0)
     console.log(id);
 
     const audioref = useRef()
@@ -22,14 +23,31 @@ const Onemusic = () => {
         })
     }, [])
 
+    useEffect(() => {
+        const music = audioref.current;
+  
+       const TimeUpdate = () =>{
+        setcurrenttime(music.currentTime)
+        console.log(currenttime);
+       }
+      music.addEventListener('timeupdate', TimeUpdate);
+    
+      return () => {
+        
+      }
+    }, [])
+    
+
     const playaudio = () =>{
         let music = audioref.current
         if (isplaying == false) {
             music.play()
           setisplaying(true)
+        }else if(music.stop){
+            setisplaying(false)   
         }else{
             music.pause()
-            setisplaying(false)
+            setisplaying(false)    
         }
     }
     
