@@ -15,10 +15,14 @@ import Http from './Http';
 import Onemusic from './Onemusic';
 import Form from './Form';
 import Login from './Login';
+import { Provider } from 'react-redux';
+import Store from './Redux/Store';
+import Count from './Count';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+   <Provider store={Store}>
     <BrowserRouter>
     <Routes>
       <Route path='/*' element={<Notfound/>}/>
@@ -26,6 +30,7 @@ root.render(
       <Route path='/music/:id' element={<Onemusic/>}/>
       <Route path='/formik' element={<Form/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/count' element={<Count/>}/>
       
       <Route path='/fetch' element={<Fetch/>} >
        <Route path='/fetch/app' element={<App />}/>
@@ -33,6 +38,7 @@ root.render(
       </Route>
     </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
